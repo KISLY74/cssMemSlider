@@ -5,12 +5,14 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <title>MemSlider</title>
 </head>
 
 <body>
    <div class="container">
-      <div id="slider">
+      <input checked type="radio" name="respond" id="desktop">
+      <article id="slider">
          <input checked type="radio" name="slider" id="im1">
          <input type="radio" name="slider" id="im2">
          <input type="radio" name="slider" id="im3">
@@ -18,10 +20,22 @@
          <div id="slides">
             <div id="block-overflow">
                <div class="image">
-                  <div><img src="1.jpg"></div>
-                  <div><img src="2.jpg"></div>
-                  <div><img src="3.jpg"></div>
-                  <div><img src="4.jpg"></div>
+                  <article>
+                     <img src="img/1.jpg">
+                     <p>Welcome</p>
+                  </article>
+                  <article>
+                     <img src="img/2.jpg">
+                     <p>It is cool!</p>
+                  </article>
+                  <article>
+                     <img src="img/3.jpg">
+                     <p>I'll be back</p>
+                  </article>
+                  <article>
+                     <img src="img/4.jpg">
+                     <p>Hasta la vista</p>
+                  </article>
                </div>
             </div>
          </div>
@@ -31,7 +45,7 @@
             <label for="im3"></label>
             <label for="im4"></label>
          </div>
-      </div>
+      </article>
    </div>
 </body>
 

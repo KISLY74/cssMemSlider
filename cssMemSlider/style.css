@@ -2,3 +2,141 @@
    margin: 0;
    padding: 0;
 }
+body {
+   background-color: #25282a;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+#slider {
+   position: relative;
+   border-radius: 20px;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 30px;
+}
+
+#slides article {
+   width: 20%;
+   float: left;
+   height: 700px;
+}
+
+#slides .image {
+   width: 500%;
+   line-height: 0;
+}
+
+#block-overflow {
+   width: 100%;
+   overflow: hidden;
+}
+
+article img {
+   width: 100%;
+   object-fit: cover;
+   height: 90%;
+   border-radius: 20px;
+   margin-bottom: 40px;
+}
+
+#desktop:checked ~ #slider {
+   max-width: 960px;
+}
+
+label,
+a {
+   cursor: pointer;
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+.container input {
+   display: none;
+}
+article p {
+   font-size: 2em;
+   color: #fff;
+}
+
+#im1:checked ~ #slides .image {
+   margin-left: 0;
+}
+
+#im2:checked ~ #slides .image {
+   margin-left: -100%;
+}
+
+#im3:checked ~ #slides .image {
+   margin-left: -200%;
+}
+
+#im4:checked ~ #slides .image {
+   margin-left: -300%;
+}
+
+#active-controls label {
+   margin-right: 15px;
+   border-radius: 50%;
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   background: #71abfe;
+   border: 3px solid #71abfe;
+}
+#active-controls label:last-child {
+   margin-right: 0;
+}
+
+#active-controls {
+   margin-bottom: 30px;
+   text-align: right;
+}
+
+#active-controls label:hover {
+   background-color: #fff;
+   border-color: #fff;
+}
+
+#im1:checked ~ #active-controls label:nth-child(1),
+#im2:checked ~ #active-controls label:nth-child(2),
+#im3:checked ~ #active-controls label:nth-child(3),
+#im4:checked ~ #active-controls label:nth-child(4) {
+   background: #25282a;
+}
+
+#slides .image {
+   border-radius: 20px;
+   transition: 0.5s;
+}
+@media (max-width: 400px) {
+   #active-controls {
+      text-align: center;
+   }
+   #slider {
+      width: 40vh;
+   }
+   div.image article {
+      max-height: 200px;
+   }
+   article img {
+      object-fit: cover;
+      height: 72%;
+   }
+   article p {
+      font-size: 1.5em;
+   }
+   #active-controls label {
+      margin-right: 5px;
+      width: 10px;
+      height: 10px;
+   }
+   #active-controls label:last-child {
+      margin-right: 0px;
+   }
+}
